@@ -26,8 +26,9 @@ export default class InnerPage extends React.Component {
     fetch(parkUrl).then(response => {
       return response.json();
     }).then(results => {
+      console.log(results)
       for(let i = 0; i < results.data.length; i++) {
-        if(results.data[i].designation == 'National Park' || results.data[i].designation === 'National and State Parks') {
+        if(results.data[i].designation == 'National Park' || results.data[i].designation === 'National and State Parks' || results.data[i].designation == 'National Park & Preserve') {
           this.setState({
             parkData: results.data[i],
             location: results.data[i].latLong
