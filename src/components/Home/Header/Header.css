@@ -1,0 +1,137 @@
+.header {
+  background: url(Header-pattern.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: var(--black);
+  padding: 0px 30px;
+  min-height: 400px;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.header img {
+  padding-bottom: 30px;
+  width: 100%;
+  height: auto;
+  max-width: 350px;
+}
+
+.header-form {
+  max-width: 800px;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Dosis', sans-serif;
+  z-index: 99;
+  position: relative;  
+}
+
+.header-form input {
+  width: 100%;
+  padding: 15px 10px 15px 20px;
+  border-radius: 7px;
+  border: 1px solid #ebebeb;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05);
+  font-weight: 800;
+  color: #383838;
+  line-height: 1;
+}
+
+.awesomplete {
+  width: 70%;
+  margin-right: 10px;
+}
+
+.awesomplete ul {
+  border-radius: 7px;
+  text-align: left;
+  border: 1px solid #ebebeb;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05);
+  background: #ffffff;
+}
+
+.awesomplete>ul:before {
+  visibility: hidden;
+  display: none;
+}
+
+.awesomplete>ul:before {
+  font-weight: 800;
+}
+
+.awesomplete>ul>li {
+  width: 100%;
+  padding: 10px;
+  padding-left: 20px;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.awesomplete>ul>li:hover {
+  background: rgba(255, 132, 32, .1);
+  color: #383838;
+}
+
+.awesomplete mark,
+.awesomplete>ul>li:hover mark,
+.awesomplete>ul>li[aria-selected=true] mark {
+  background: var(--orange);
+}
+
+.awesomplete>ul>li[aria-selected=true] {
+  background: rgba(255, 132, 33, 0.18);
+  color: #383838;
+}
+
+.header-form button {
+  padding: 16px 20px;
+  background: var(--orange);
+  border: none;
+  border-radius: 7px;
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.header-search-error {
+  font-weight: 800;
+  font-size: 11px;
+  z-index: -99;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  padding-top: 7px;
+  animation: showError .3s ease-in-out forwards;
+}
+
+@keyframes showError {
+  from {
+    transform: translateY(-25px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+
+@media screen and (max-width: 495px) {
+  .header-form {
+    width: 100%;
+  }
+  .awesomplete {
+    width: 100%;
+    margin-right: 0px;
+    padding-bottom: 20px;
+  }
+  .header-form button {
+    width: 100%;
+  }
+}

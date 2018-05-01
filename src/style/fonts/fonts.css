@@ -1,0 +1,6 @@
+@font-face {
+  font-family: "Sonder-Sans";
+  src: url("./SonderSans-BlackRough.otf") format("opentype");
+}
+
+@import url('https://fonts.googleapis.com/css?family=Dosis:700,800');

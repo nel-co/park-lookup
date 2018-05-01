@@ -1,0 +1,149 @@
+.park-inner {
+  color: var(--black);
+  text-align: center;
+}
+
+.park-images {
+  padding: 0px 0px 40px;
+}
+
+.park-inner h1,
+.park-inner h3 {
+  font-family: 'Sonder-Sans', sans-serif;
+}
+
+.park-inner h1 {
+  letter-spacing: 6pt;  
+}
+
+.park-inner h3 {
+  letter-spacing: 3pt;  
+}
+
+.park-inner p {
+  font-family: 'Dosis', sans-serif;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.park-inner .park-hero button {
+  padding: 12px 16px;
+  background: var(--orange);
+  border: none;
+  border-radius: 7px;
+  color: #ffffff;
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  font-family: 'Dosis', sans-serif;
+  text-transform: uppercase;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.park-inner .container {
+  width: 70%;
+}
+
+.park-inner .park-hero {
+  min-height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.park-images-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.park-image {
+  min-height: 200px;
+  min-width: 200px;
+  width: 100%;
+  height: 320px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media screen and (max-width: 800px) {
+  .park-images-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .park-images-container {
+    grid-template-columns: 1fr;
+  }
+  .park-image {
+    min-height: 150px;
+    min-width: 150px;
+  }
+}
+
+.park-location .container {
+  padding-bottom: 30px;
+}
+
+.google-maps {
+  position: relative;
+  padding-bottom: 45%;
+  height: 0;
+  overflow: hidden;
+}
+.google-maps iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+@media screen and (max-width: 800px) {
+  .google-maps {
+    padding-bottom: 50%;
+  }
+}
+
+h1.placeholder, h3.placeholder {
+  background: var(--loading);
+  color: var(--loading);
+  display: inline;
+}
+
+.p-placeholder {
+  width: 100%;
+  min-height: 110px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-bottom: 15px;  
+}
+
+.p-placeholder div {
+  background: var(--loading);
+  width: 100%;
+  height: 14px;  
+}
+
+button.placeholder {
+  color: var(--loading) !important;
+  background: var(--loading) !important;
+  border-radius: 0px !important;
+}
+
+.image-placeholder .park-image {
+  background: var(--loading);
+}
+
+.image-placeholder {
+  grid-gap: 10px;
+  padding-top: 15px;
+}
+
+.google-maps.placeholder {
+  background: var(--loading);
+}
