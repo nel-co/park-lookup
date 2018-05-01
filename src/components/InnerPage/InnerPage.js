@@ -88,7 +88,7 @@ export default class InnerPage extends React.Component {
         <p>{this.state.parkData.directionsInfo}</p>
       </div>
       <div className="google-maps">
-        <iframe src={`http://maps.google.com/maps?q=${this.getLocation()}&z=9&output=embed`} width="600" height="450" frameBorder="0" style={{border:0}}></iframe>
+        <iframe src={`https://maps.google.com/maps?q=${this.getLocation()}&z=9&output=embed`} width="600" height="450" frameBorder="0" style={{border:0}}></iframe>
       </div>
     </div>
     </span>
