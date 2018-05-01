@@ -16,6 +16,7 @@ export default class InnerPage extends React.Component {
   }
 
   componentDidMount = () => {
+    if(window) {window.scrollTo(0, 0);}
     let currentLocation = location.pathname;
     let searchString = this.formatString(currentLocation);
     let parkUrl = `https://developer.nps.gov/api/v1/parks?q=${searchString}&api_key=vR2TZ6DvE9VFvcVnswQ01iP0lkV8vtU2RW7k3nS6`
@@ -26,7 +27,7 @@ export default class InnerPage extends React.Component {
       return response.json();
     }).then(results => {
       for(let i = 0; i < results.data.length; i++) {
-        if(results.data[i].designation == 'National Park') {
+        if(results.data[i].designation == 'National Park' || results.data[i].designation === 'National and State Parks') {
           this.setState({
             parkData: results.data[i],
             location: results.data[i].latLong

@@ -1,6 +1,8 @@
 @font-face {
   font-family: "Sonder-Sans";
-  src: url("./SonderSans-BlackRough.otf") format("opentype");
+  src: url("./SonderSans-BlackRough.otf") format("opentype"),
+       url('./SonderSans-BlackRough.woff2') format('woff2'),
+       url('./SonderSans-BlackRough.woff') format('woff');
 }
 
 @import url('https://fonts.googleapis.com/css?family=Dosis:700,800');
